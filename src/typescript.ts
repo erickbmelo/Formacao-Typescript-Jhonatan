@@ -15,13 +15,20 @@ lista2.push("Erick", "Árvore", 22, true, []); // Ao declarar array: number, ale
 
 // Tipos Personalizados
 type Transacao = {
-    tipoTransacao: string;
+    tipoTransacao: tipoTransacao;
     data: Date;
     valor: number;
 }
 
+// Enum
+enum tipoTransacao {
+    DEPOSITO = "Depósito",
+    TRANSFERENCIA = "Transferência",
+    PAGAMENTO_BOLETO = "Pagamento de Boleto"
+}
+
 const novaTransacao: Transacao = {
-    tipoTransacao: "",
+    tipoTransacao: tipoTransacao.DEPOSITO, // Aqui foi escolhido Depósito
     data: new Date(),
     valor: 0
 }
